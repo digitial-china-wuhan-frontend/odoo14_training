@@ -5,7 +5,7 @@
 - 开发环境搭建
 - 安装一个 Backend View 主题
 
-## 第二单元 开启调试模式
+## 第二单元 设置调试环境
 
 - 环境准备
 
@@ -14,7 +14,10 @@
 
 - VSCode 插件安装
 - Attach Container
-- 安装一个模块 / 断点设置
+- 配置 Remote Container 中 VSCode Debug
+  - 安装 python + docker 插件
+  - 配置 `launch.json`
+- 断点设置
 
 ## 参考内容 References
 

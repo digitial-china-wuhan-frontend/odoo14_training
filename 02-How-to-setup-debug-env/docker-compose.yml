@@ -1,0 +1,23 @@
+version: "3"
+services:
+  odoo:
+    image: fancn21th/odoo-dev:14.3
+    ports:
+      - "8069:8069"
+    volumes:
+      - ./dev/addons:/root/sourcecode/odoo/dev/addons
+    depends_on:
+      - pqdb
+
+  pqdb:
+    image: postgres:10
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - odoo-db-data:/var/lib/postgresql/data/pgdata
+
+volumes:
+  odoo-db-data:
