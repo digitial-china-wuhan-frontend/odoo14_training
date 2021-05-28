@@ -11,6 +11,8 @@ services:
 
   pqdb:
     image: postgres:10
+    ports:
+      - "5433:5432"
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_PASSWORD=odoo
